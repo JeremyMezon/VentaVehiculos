@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using VentaVehiculos.DataModel.Entities;
 
 namespace VentaVehiculos.DataModel.Context
 {
@@ -20,7 +21,7 @@ namespace VentaVehiculos.DataModel.Context
         public DbSet<Modelo> Modelos { set; get; }
         public DbSet<Marca> Marcas { set; get; }
         public DbSet<Venta> Ventas { set; get; }
-        public DbSet<TipoTransimision> TipoTransimisions { set; get; }
+        public DbSet<TipoTransmision> TipoTransmisions { set; get; }
         public DbSet<TipoCombustible> TipoCombustibles { set; get; }
     }
 }
