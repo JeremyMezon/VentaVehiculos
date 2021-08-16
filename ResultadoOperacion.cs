@@ -8,8 +8,8 @@ namespace VentaVehiculos
 {
     class ResultadoOperacion
     {
-        public static bool Success { get; set; }
-        public static string Message { get; set; }
-        public static object Data { get; set; }
+        public bool Success { get; set; }
+        public string Message { get; set; }
+        public object Data { get; set; }
     }
 }
