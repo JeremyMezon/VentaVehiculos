@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VentaVehiculos
+namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
-    public partial class Form1 : Form
+    public partial class Vehiculos : Form
     {
-        public Form1()
+        public Vehiculos()
         {
             InitializeComponent();
         }
