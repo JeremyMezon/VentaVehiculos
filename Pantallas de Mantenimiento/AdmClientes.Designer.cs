@@ -43,6 +43,8 @@
             this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.LbTituloCliente = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboEstado = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNombreCliente
@@ -192,11 +194,38 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(492, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 19);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Estado";
+            // 
+            // comboEstado
+            // 
+            this.comboEstado.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.comboEstado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboEstado.FormattingEnabled = true;
+            this.comboEstado.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.comboEstado.Location = new System.Drawing.Point(461, 96);
+            this.comboEstado.Name = "comboEstado";
+            this.comboEstado.Size = new System.Drawing.Size(121, 21);
+            this.comboEstado.TabIndex = 16;
+            // 
             // AdmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 407);
+            this.Controls.Add(this.comboEstado);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.LbTituloCliente);
             this.Controls.Add(this.btnGuardarCliente);
@@ -234,7 +263,9 @@
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Button btnGuardarCliente;
-        private System.Windows.Forms.Label LbTituloCliente;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        public System.Windows.Forms.Label LbTituloCliente;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboEstado;
     }
 }

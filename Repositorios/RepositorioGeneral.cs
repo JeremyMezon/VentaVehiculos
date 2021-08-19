@@ -36,7 +36,7 @@ namespace VentaVehiculos.Repositorios
         {
             if (_set.Any())
             {
-                return _set.Where(x => x.Borrado == false && x.Estatus != "I").ToList();
+                return _set.Where(x => x.Borrado == false && x.Estatus != "IN").ToList();
             }
 
             return null;
@@ -56,7 +56,9 @@ namespace VentaVehiculos.Repositorios
         }
         public ResultadoOperacion Eliminar(T entidad)
         {
-            _set.Remove(entidad);
+            entidad.Borrado = true;
+
+            dbContext.Entry(entidad).State = EntityState.Modified;
             dbContext.SaveChanges();
 
             return new ResultadoOperacion()
