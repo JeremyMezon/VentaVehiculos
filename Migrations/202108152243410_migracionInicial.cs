@@ -51,7 +51,7 @@
                         FechaActualizacion = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Marcas", t => t.MarcaId, cascadeDelete: true)
+                .ForeignKey("dbo.Marcas", t => t.MarcaId, cascadeDelete: false)
                 .Index(t => t.MarcaId);
             
             CreateTable(
@@ -79,9 +79,9 @@
                         TipoTransmision_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Modeloes", t => t.ModeloId, cascadeDelete: true)
-                .ForeignKey("dbo.TipoCombustibles", t => t.TipoCombustible_Id, cascadeDelete: true)
-                .ForeignKey("dbo.TipoTransmisions", t => t.TipoTransmision_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Modeloes", t => t.ModeloId, cascadeDelete: false)
+                .ForeignKey("dbo.TipoCombustibles", t => t.TipoCombustible_Id, cascadeDelete: false)
+                .ForeignKey("dbo.TipoTransmisions", t => t.TipoTransmision_Id, cascadeDelete: false)
                 .Index(t => t.ModeloId)
                 .Index(t => t.TipoCombustible_Id)
                 .Index(t => t.TipoTransmision_Id);
@@ -127,9 +127,9 @@
                         MetodoPago_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Clientes", t => t.ClienteId, cascadeDelete: true)
-                .ForeignKey("dbo.Vehiculoes", t => t.MetodoPago_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Vehiculoes", t => t.VehiculoId, cascadeDelete: true)
+                .ForeignKey("dbo.Clientes", t => t.ClienteId, cascadeDelete: false)
+                .ForeignKey("dbo.Vehiculoes", t => t.MetodoPago_Id, cascadeDelete: false)
+                .ForeignKey("dbo.Vehiculoes", t => t.VehiculoId, cascadeDelete: false)
                 .Index(t => t.ClienteId)
                 .Index(t => t.VehiculoId)
                 .Index(t => t.MetodoPago_Id);

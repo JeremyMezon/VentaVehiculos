@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.LbTituloCliente = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNombreCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNombreCliente.Location = new System.Drawing.Point(125, 156);
+            this.txtNombreCliente.MaxLength = 100;
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(203, 20);
+            this.txtNombreCliente.TabIndex = 2;
             // 
             // label1
             // 
@@ -103,13 +104,14 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Cedula:";
             // 
-            // textBox2
+            // txtDireccion
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 294);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 85);
-            this.textBox2.TabIndex = 6;
+            this.txtDireccion.Location = new System.Drawing.Point(125, 294);
+            this.txtDireccion.MaxLength = 100;
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(203, 85);
+            this.txtDireccion.TabIndex = 6;
             // 
             // label6
             // 
@@ -121,33 +123,37 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Direccion:";
             // 
-            // textBox3
+            // txtTelefono
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 228);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtTelefono.Location = new System.Drawing.Point(125, 228);
+            this.txtTelefono.MaxLength = 100;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(203, 20);
+            this.txtTelefono.TabIndex = 4;
             // 
-            // textBox4
+            // txtCedula
             // 
-            this.textBox4.Location = new System.Drawing.Point(125, 93);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtCedula.Location = new System.Drawing.Point(125, 93);
+            this.txtCedula.MaxLength = 100;
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(203, 20);
+            this.txtCedula.TabIndex = 1;
             // 
-            // textBox5
+            // txtApellidoCliente
             // 
-            this.textBox5.Location = new System.Drawing.Point(433, 156);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(203, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtApellidoCliente.Location = new System.Drawing.Point(433, 156);
+            this.txtApellidoCliente.MaxLength = 100;
+            this.txtApellidoCliente.Name = "txtApellidoCliente";
+            this.txtApellidoCliente.Size = new System.Drawing.Size(203, 20);
+            this.txtApellidoCliente.TabIndex = 3;
             // 
-            // textBox6
+            // txtCorreo
             // 
-            this.textBox6.Location = new System.Drawing.Point(433, 228);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(203, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtCorreo.Location = new System.Drawing.Point(433, 228);
+            this.txtCorreo.MaxLength = 75;
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(203, 20);
+            this.txtCorreo.TabIndex = 5;
             // 
             // btnGuardarCliente
             // 
@@ -159,9 +165,10 @@
             this.btnGuardarCliente.Location = new System.Drawing.Point(433, 344);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
             this.btnGuardarCliente.Size = new System.Drawing.Size(140, 35);
-            this.btnGuardarCliente.TabIndex = 12;
+            this.btnGuardarCliente.TabIndex = 7;
             this.btnGuardarCliente.Text = "Guardar";
             this.btnGuardarCliente.UseVisualStyleBackColor = false;
+            this.btnGuardarCliente.Click += new System.EventHandler(this.btnGuardarCliente_Click);
             // 
             // LbTituloCliente
             // 
@@ -176,7 +183,7 @@
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.LightGray;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(29, 55);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -193,18 +200,18 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.LbTituloCliente);
             this.Controls.Add(this.btnGuardarCliente);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtApellidoCliente);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombreCliente);
             this.Name = "AdmClientes";
             this.Text = "AdmClientes";
             this.ResumeLayout(false);
@@ -214,18 +221,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.TextBox txtApellidoCliente;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.Label LbTituloCliente;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;

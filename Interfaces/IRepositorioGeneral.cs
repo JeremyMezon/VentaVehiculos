@@ -8,7 +8,7 @@ namespace VentaVehiculos.Interfaces
 {
     interface IRepositorioGeneral<T>
     {
-        T Crear(T cliente);
+        ResultadoOperacion Crear(T cliente);
         List<T> GetAll();
         T FIndById(int ID);
         ResultadoOperacion Modificar(T cliente);

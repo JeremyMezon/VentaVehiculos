@@ -22,15 +22,24 @@ namespace VentaVehiculos.Repositorios
             _set = dbContext.Set<T>();
         }
 
-        public T Crear(T entidad)
+        public ResultadoOperacion Crear(T entidad)
         {
             _set.Add(entidad);
             dbContext.SaveChanges();
-            return entidad;
+            return new ResultadoOperacion()
+            {
+                Success = true,
+                Message = "Datos Guardados Correctamente"
+            };
         }
         public List<T> GetAll()
         {
-            return _set.Where(x => x.Borrado == false && x.Estatus != "I").ToList();
+            if (_set.Any())
+            {
+                return _set.Where(x => x.Borrado == false && x.Estatus != "I").ToList();
+            }
+
+            return null;
         }
         public T FIndById(int ID)
         {

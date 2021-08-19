@@ -10,17 +10,14 @@ namespace VentaVehiculos.DataModel.Entities
 {
     public class Venta: BaseEntity
     {
-        [Required]
-        public int ClienteId { get; set; }
-        [Required]
+        public int? ClienteId { get; set; }
+        
         public Cliente Cliente { get; set; }
-        [Required]
-        public int VehiculoId { get; set; }
-        [Required]
+        
+        public int? VehiculoId { get; set; }
+        
         public Vehiculo Vehiculo { get; set; }
-        [Required]
-        public Vehiculo MetodoPago { get; set; }
-        [Required]
+        public string MetodoPago { get; set; }
         public int Precio { get; set; }
     }
 }

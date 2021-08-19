@@ -10,15 +10,12 @@ namespace VentaVehiculos.DataModel.Entities
 {
     public class BaseEntity
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required]
-        [Column(TypeName = "BIT")]
+
         public bool Borrado { get; set; }
-        [Required]
-        [Column(TypeName = "Varchar")]
-        [StringLength(2)]
         public string Estatus { get; set; }
-        [Required]
         public DateTime FechaRegistro { get; set; }
         public DateTime FechaActualizacion { get; set; }
     }

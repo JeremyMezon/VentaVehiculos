@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VentaVehiculos.Repositorios;
 
 namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
@@ -21,6 +22,13 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         {
             AdmClientes admClientes = new AdmClientes();
             admClientes.ShowDialog();
+        }
+
+        private void Clientes_Load(object sender, EventArgs e)
+        {
+            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+            dataClientes.DataSource = clienteRepositorio.GetAll();
+            
         }
     }
 }
