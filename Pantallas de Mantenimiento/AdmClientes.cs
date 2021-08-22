@@ -75,7 +75,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         Cliente capturarCliente()
         {
             Cliente cliente = new Cliente();
-            string estado = comboEstado.SelectedItem.ToString().Substring(0, 2).ToUpper();
+              string estado = comboEstado.SelectedItem.ToString().Substring(0, 2).ToUpper();
 
             if (esModificacion)
             {
