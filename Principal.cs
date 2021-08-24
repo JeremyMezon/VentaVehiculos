@@ -34,5 +34,11 @@ namespace VentaVehiculos
             Marcas marca = new Marcas();
             marca.ShowDialog();
         }
+
+        private void modelosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Modelos modelos = new Modelos();
+            modelos.ShowDialog();
+        }
     }
 }

@@ -34,5 +34,11 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         {
             actualizarTabla();
         }
+
+        private void btnNuevoModelo_Click(object sender, EventArgs e)
+        {
+            AdmModelos admModelos = new AdmModelos();
+            admModelos.ShowDialog();
+        }
     }
 }

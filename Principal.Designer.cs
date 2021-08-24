@@ -90,6 +90,7 @@
             this.modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
             this.modelosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.modelosToolStripMenuItem.Text = "Modelos";
+            this.modelosToolStripMenuItem.Click += new System.EventHandler(this.modelosToolStripMenuItem_Click);
             // 
             // tipoDeTransmisionToolStripMenuItem
             // 
