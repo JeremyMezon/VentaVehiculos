@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnActualizarTablaCombustible = new System.Windows.Forms.Button();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.btnBorrarCombustible = new System.Windows.Forms.Button();
@@ -85,6 +85,7 @@
             this.btnBorrarCombustible.TabIndex = 4;
             this.btnBorrarCombustible.Text = "Eliminar";
             this.btnBorrarCombustible.UseVisualStyleBackColor = false;
+            this.btnBorrarCombustible.Click += new System.EventHandler(this.btnBorrarCombustible_Click);
             // 
             // btnModificarCombustible
             // 
@@ -99,6 +100,7 @@
             this.btnModificarCombustible.TabIndex = 3;
             this.btnModificarCombustible.Text = "Modificar";
             this.btnModificarCombustible.UseVisualStyleBackColor = false;
+            this.btnModificarCombustible.Click += new System.EventHandler(this.btnModificarCombustible_Click);
             // 
             // btnNuevoCombustible
             // 
@@ -113,6 +115,7 @@
             this.btnNuevoCombustible.TabIndex = 2;
             this.btnNuevoCombustible.Text = "Nuevo";
             this.btnNuevoCombustible.UseVisualStyleBackColor = false;
+            this.btnNuevoCombustible.Click += new System.EventHandler(this.btnNuevoCombustible_Click);
             // 
             // label1
             // 
@@ -128,19 +131,19 @@
             // 
             this.dataCombustible.AllowUserToAddRows = false;
             this.dataCombustible.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataCombustible.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataCombustible.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataCombustible.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataCombustible.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataCombustible.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataCombustible.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataCombustible.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataCombustible.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataCombustible.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataCombustible.DoubleBuffered = true;

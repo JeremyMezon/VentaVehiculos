@@ -26,9 +26,11 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
 
         private void AdmModelos_Load(object sender, EventArgs e)
         {
-            Modelo modelo = new Modelo();
-            ModeloRepositorio modeloRep = new ModeloRepositorio();
-            comboMarcas.DataSource = modeloRep.GetAll();
+            Marca marca = new Marca();
+            MarcaRepositorio marcaRep = new MarcaRepositorio();
+            comboMarcas.DisplayMember = marca.Nombre;
+            comboMarcas.ValueMember = marca.Id.ToString();
+            comboMarcas.DataSource = marcaRep.GetAll();
             
 
         }

@@ -33,5 +33,25 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         {
             actualizarTabla();
         }
+
+        private void btnNuevoVehiculo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificarVehiculo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminarVehiculo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Vehiculos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.btnEliminarVehiculo = new System.Windows.Forms.Button();
             this.btnModificarVehiculo = new System.Windows.Forms.Button();
@@ -70,6 +70,7 @@
             this.btnEliminarVehiculo.TabIndex = 4;
             this.btnEliminarVehiculo.Text = "Eliminar";
             this.btnEliminarVehiculo.UseVisualStyleBackColor = false;
+            this.btnEliminarVehiculo.Click += new System.EventHandler(this.btnEliminarVehiculo_Click);
             // 
             // btnModificarVehiculo
             // 
@@ -84,6 +85,7 @@
             this.btnModificarVehiculo.TabIndex = 3;
             this.btnModificarVehiculo.Text = "Modificar";
             this.btnModificarVehiculo.UseVisualStyleBackColor = false;
+            this.btnModificarVehiculo.Click += new System.EventHandler(this.btnModificarVehiculo_Click);
             // 
             // btnNuevoVehiculo
             // 
@@ -98,6 +100,7 @@
             this.btnNuevoVehiculo.TabIndex = 2;
             this.btnNuevoVehiculo.Text = "Nuevo Vehiculo";
             this.btnNuevoVehiculo.UseVisualStyleBackColor = false;
+            this.btnNuevoVehiculo.Click += new System.EventHandler(this.btnNuevoVehiculo_Click);
             // 
             // label1
             // 
@@ -111,19 +114,19 @@
             // 
             // dataVehiculos
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataVehiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataVehiculos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataVehiculos.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataVehiculos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataVehiculos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataVehiculos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataVehiculos.DoubleBuffered = true;
@@ -163,6 +166,7 @@
             this.Controls.Add(this.dataVehiculos);
             this.Name = "Vehiculos";
             this.Text = "Vehiculos";
+            this.Load += new System.EventHandler(this.Vehiculos_Load);
             this.bunifuCards1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataVehiculos)).EndInit();
             this.ResumeLayout(false);

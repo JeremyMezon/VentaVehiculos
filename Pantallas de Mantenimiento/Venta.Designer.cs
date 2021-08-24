@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnActualizarTablaVenta = new System.Windows.Forms.Button();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.btnBorrarVenta = new System.Windows.Forms.Button();
@@ -85,6 +85,7 @@
             this.btnBorrarVenta.TabIndex = 4;
             this.btnBorrarVenta.Text = "Eliminar";
             this.btnBorrarVenta.UseVisualStyleBackColor = false;
+            this.btnBorrarVenta.Click += new System.EventHandler(this.btnBorrarVenta_Click);
             // 
             // btnModificarVenta
             // 
@@ -99,6 +100,7 @@
             this.btnModificarVenta.TabIndex = 3;
             this.btnModificarVenta.Text = "Modificar";
             this.btnModificarVenta.UseVisualStyleBackColor = false;
+            this.btnModificarVenta.Click += new System.EventHandler(this.btnModificarVenta_Click);
             // 
             // btnNuevaVenta
             // 
@@ -113,6 +115,7 @@
             this.btnNuevaVenta.TabIndex = 2;
             this.btnNuevaVenta.Text = "Nueva Venta";
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // label1
             // 
@@ -128,19 +131,19 @@
             // 
             this.dataVenta.AllowUserToAddRows = false;
             this.dataVenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataVenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataVenta.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataVenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataVenta.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataVenta.DoubleBuffered = true;
@@ -167,6 +170,7 @@
             this.Controls.Add(this.dataVenta);
             this.Name = "Venta";
             this.Text = "Venta";
+            this.Load += new System.EventHandler(this.Venta_Load);
             this.bunifuCards1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataVenta)).EndInit();
             this.ResumeLayout(false);

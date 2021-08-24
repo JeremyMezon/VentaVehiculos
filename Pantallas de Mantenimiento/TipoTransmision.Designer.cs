@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnActualizarTablaTransmision = new System.Windows.Forms.Button();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.btnBorrarTransmision = new System.Windows.Forms.Button();
@@ -85,6 +85,7 @@
             this.btnBorrarTransmision.TabIndex = 4;
             this.btnBorrarTransmision.Text = "Eliminar";
             this.btnBorrarTransmision.UseVisualStyleBackColor = false;
+            this.btnBorrarTransmision.Click += new System.EventHandler(this.btnBorrarTransmision_Click);
             // 
             // btnModificarTransmision
             // 
@@ -99,6 +100,7 @@
             this.btnModificarTransmision.TabIndex = 3;
             this.btnModificarTransmision.Text = "Modificar";
             this.btnModificarTransmision.UseVisualStyleBackColor = false;
+            this.btnModificarTransmision.Click += new System.EventHandler(this.btnModificarTransmision_Click);
             // 
             // btnNuevoTransmision
             // 
@@ -113,6 +115,7 @@
             this.btnNuevoTransmision.TabIndex = 2;
             this.btnNuevoTransmision.Text = "Nuevo";
             this.btnNuevoTransmision.UseVisualStyleBackColor = false;
+            this.btnNuevoTransmision.Click += new System.EventHandler(this.btnNuevoTransmision_Click);
             // 
             // label1
             // 
@@ -128,19 +131,19 @@
             // 
             this.dataTransmision.AllowUserToAddRows = false;
             this.dataTransmision.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataTransmision.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataTransmision.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataTransmision.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataTransmision.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataTransmision.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataTransmision.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataTransmision.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataTransmision.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTransmision.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataTransmision.DoubleBuffered = true;

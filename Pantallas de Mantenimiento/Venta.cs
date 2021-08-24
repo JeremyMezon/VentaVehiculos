@@ -21,5 +21,25 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         {
 
         }
+
+        private void btnNuevaVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificarVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrarVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Venta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

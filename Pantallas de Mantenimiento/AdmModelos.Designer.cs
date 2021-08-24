@@ -136,9 +136,6 @@
             this.comboMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMarcas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboMarcas.FormattingEnabled = true;
-            this.comboMarcas.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
             this.comboMarcas.Location = new System.Drawing.Point(172, 98);
             this.comboMarcas.Name = "comboMarcas";
             this.comboMarcas.Size = new System.Drawing.Size(203, 21);

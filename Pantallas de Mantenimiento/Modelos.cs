@@ -40,5 +40,15 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             AdmModelos admModelos = new AdmModelos();
             admModelos.ShowDialog();
         }
+
+        private void btnModificarModelo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBorrarModelo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
