@@ -11,25 +11,25 @@ using VentaVehiculos.Repositorios;
 
 namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
-    public partial class Vehiculos : Form
+    public partial class TipoTransmision : Form
     {
-        public Vehiculos()
+        public TipoTransmision()
         {
             InitializeComponent();
         }
 
-        private void btnActualizarTablaVehiculos_Click(object sender, EventArgs e)
+        private void btnActualizarTablaTransmision_Click(object sender, EventArgs e)
         {
-
+            actualizarTabla();
         }
 
         void actualizarTabla()
         {
-            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
-            dataVehiculos.DataSource = vehiculoRepositorio.GetAll();
+            TipoTransmisionRepositorio transmisionRepositorio = new TipoTransmisionRepositorio();
+            dataTransmision.DataSource = transmisionRepositorio.GetAll();
         }
 
-        private void dataVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void TipoTransmision_Load(object sender, EventArgs e)
         {
             actualizarTabla();
         }

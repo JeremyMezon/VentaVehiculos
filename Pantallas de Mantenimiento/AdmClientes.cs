@@ -21,6 +21,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         public AdmClientes()
         {
             InitializeComponent();
+            comboEstado.SelectedIndex = 0;
         }
 
         public AdmClientes(Cliente _cliente)
@@ -34,6 +35,14 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             txtCorreo.Text = _cliente.Correo;
             txtDireccion.Text = _cliente.Direccion;
             txtTelefono.Text = _cliente.Telefono;
+            if(_cliente.Estatus == "AC")
+            {
+                comboEstado.SelectedItem = "Activo";
+            }
+            else
+            {
+                comboEstado.SelectedItem = "Inactivo";
+            }
             esModificacion = true;
 
         }
@@ -46,26 +55,29 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         private void btnGuardarCliente_Click(object sender, EventArgs e)
         {
 
-            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
-            Cliente cliente = this.capturarCliente();
-
-            if (this.esModificacion)
+            if (validacionClientes())
             {
-                clienteRepositorio.Modificar(cliente);
-                MessageBox.Show("Datos actualizados correctamente", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                var feedback = clienteRepositorio.Crear(cliente);
+                ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+                Cliente cliente = this.capturarCliente();
 
-                if (feedback.Success)
+                if (this.esModificacion)
                 {
-                    MessageBox.Show(feedback.Message, "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clienteRepositorio.Modificar(cliente);
+                    MessageBox.Show("Datos actualizados correctamente", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(feedback.Message, "No se pudo guardar los datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var feedback = clienteRepositorio.Crear(cliente);
 
+                    if (feedback.Success)
+                    {
+                        MessageBox.Show(feedback.Message, "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(feedback.Message, "No se pudo guardar los datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
             }
 
@@ -82,18 +94,55 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 cliente.Id = this.cliente.Id;
             }
 
-            cliente.Cedula = txtCedula.Text;
-            cliente.Nombre = txtNombreCliente.Text;
-            cliente.Apellido = txtApellidoCliente.Text;
-            cliente.Telefono = txtTelefono.Text;
-            cliente.Correo = txtCorreo.Text;
-            cliente.Direccion = txtDireccion.Text;
-            cliente.Estatus = estado;
-            cliente.Borrado = false;
-            cliente.FechaRegistro = esModificacion ? this.cliente.FechaRegistro : DateTime.Now;
-            cliente.FechaActualizacion = DateTime.Now;
+                cliente.Cedula = txtCedula.Text;
+                cliente.Nombre = txtNombreCliente.Text;
+                cliente.Apellido = txtApellidoCliente.Text;
+                cliente.Telefono = txtTelefono.Text;
+                cliente.Correo = txtCorreo.Text;
+                cliente.Direccion = txtDireccion.Text;
+                cliente.Estatus = estado;
+                cliente.Borrado = false;
+                cliente.FechaRegistro = esModificacion ? this.cliente.FechaRegistro : DateTime.Now;
+                cliente.FechaActualizacion = DateTime.Now;
+            
+
 
             return cliente; 
+        }
+
+        bool validacionClientes()
+        {
+            if (string.IsNullOrWhiteSpace(txtCedula.Text))
+            {
+                MessageBox.Show("La Cedula no puede estar vacia", "Campos vacios",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtNombreCliente.Text))
+            {
+                MessageBox.Show("El nombre no puede estar vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtApellidoCliente.Text))
+            {
+                MessageBox.Show("El apellido no puede estar vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                MessageBox.Show("La Direccion no puede estar vacia", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (string.IsNullOrWhiteSpace(txtCorreo.Text))
+            {
+                MessageBox.Show("El Correo no puede estar vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        private void AdmClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

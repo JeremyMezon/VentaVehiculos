@@ -61,8 +61,8 @@
             this.tipoDeCombustibleToolStripMenuItem,
             this.ventaDeVehiculoToolStripMenuItem});
             this.manteminiemtoToolStripMenuItem.Name = "manteminiemtoToolStripMenuItem";
-            this.manteminiemtoToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
-            this.manteminiemtoToolStripMenuItem.Text = "Manteminiemto";
+            this.manteminiemtoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.manteminiemtoToolStripMenuItem.Text = "Manteminiento";
             this.manteminiemtoToolStripMenuItem.Click += new System.EventHandler(this.manteminiemtoToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
@@ -83,6 +83,7 @@
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
             this.marcasToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.marcasToolStripMenuItem.Text = "Marcas";
+            this.marcasToolStripMenuItem.Click += new System.EventHandler(this.marcasToolStripMenuItem_Click);
             // 
             // modelosToolStripMenuItem
             // 

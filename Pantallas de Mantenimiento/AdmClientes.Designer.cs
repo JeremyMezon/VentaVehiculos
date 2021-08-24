@@ -243,6 +243,7 @@
             this.Controls.Add(this.txtNombreCliente);
             this.Name = "AdmClientes";
             this.Text = "AdmClientes";
+            this.Load += new System.EventHandler(this.AdmClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

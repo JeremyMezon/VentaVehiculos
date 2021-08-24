@@ -11,25 +11,25 @@ using VentaVehiculos.Repositorios;
 
 namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
-    public partial class Vehiculos : Form
+    public partial class TipoCombustible : Form
     {
-        public Vehiculos()
+        public TipoCombustible()
         {
             InitializeComponent();
         }
 
-        private void btnActualizarTablaVehiculos_Click(object sender, EventArgs e)
-        {
-
-        }
-
         void actualizarTabla()
         {
-            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
-            dataVehiculos.DataSource = vehiculoRepositorio.GetAll();
+            TipoCombustibleRepositorio clienteRepositorio = new TipoCombustibleRepositorio();
+            dataCombustible.DataSource = clienteRepositorio.GetAll();
         }
 
-        private void dataVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnActualizarTablaCombustible_Click(object sender, EventArgs e)
+        {
+            actualizarTabla();
+        }
+
+        private void TipoCombustible_Load(object sender, EventArgs e)
         {
             actualizarTabla();
         }

@@ -122,7 +122,9 @@ namespace VentaVehiculos.DataModel.Context
             modelBuilder.Entity<Cliente>()
                 .Property(p => p.Telefono)
                 .HasMaxLength(30)
-                .HasColumnType("varchar");
+                .HasColumnType("varchar")
+                .IsOptional();
+            
 
             modelBuilder.Entity<Cliente>()
                 .Property(p => p.Direccion)

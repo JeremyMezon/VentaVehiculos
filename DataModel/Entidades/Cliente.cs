@@ -27,5 +27,6 @@ namespace VentaVehiculos.DataModel.Entities
 
 
 
+
     }
 }

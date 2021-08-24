@@ -28,5 +28,11 @@ namespace VentaVehiculos
             Clientes clientes = new Clientes();
             clientes.ShowDialog();
         }
+
+        private void marcasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Marcas marca = new Marcas();
+            marca.ShowDialog();
+        }
     }
 }

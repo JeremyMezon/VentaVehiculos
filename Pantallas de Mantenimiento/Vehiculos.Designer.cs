@@ -36,6 +36,7 @@
             this.btnNuevoVehiculo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataVehiculos = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.btnActualizarTablaVehiculos = new System.Windows.Forms.Button();
             this.bunifuCards1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataVehiculos)).BeginInit();
             this.SuspendLayout();
@@ -134,12 +135,29 @@
             this.dataVehiculos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataVehiculos.Size = new System.Drawing.Size(800, 253);
             this.dataVehiculos.TabIndex = 4;
+            this.dataVehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataVehiculos_CellContentClick);
+            // 
+            // btnActualizarTablaVehiculos
+            // 
+            this.btnActualizarTablaVehiculos.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnActualizarTablaVehiculos.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnActualizarTablaVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizarTablaVehiculos.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarTablaVehiculos.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnActualizarTablaVehiculos.Location = new System.Drawing.Point(559, 100);
+            this.btnActualizarTablaVehiculos.Name = "btnActualizarTablaVehiculos";
+            this.btnActualizarTablaVehiculos.Size = new System.Drawing.Size(174, 35);
+            this.btnActualizarTablaVehiculos.TabIndex = 7;
+            this.btnActualizarTablaVehiculos.Text = "Actualizar Datos";
+            this.btnActualizarTablaVehiculos.UseVisualStyleBackColor = false;
+            this.btnActualizarTablaVehiculos.Click += new System.EventHandler(this.btnActualizarTablaVehiculos_Click);
             // 
             // Vehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnActualizarTablaVehiculos);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataVehiculos);
@@ -160,5 +178,6 @@
         private System.Windows.Forms.Button btnNuevoVehiculo;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataVehiculos;
+        private System.Windows.Forms.Button btnActualizarTablaVehiculos;
     }
 }
