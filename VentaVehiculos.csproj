@@ -81,6 +81,10 @@
     <Compile Include="Migrations\202108240412240_migracionInicial1.designer.cs">
       <DependentUpon>202108240412240_migracionInicial1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108240544453_migracionInicial2.cs" />
+    <Compile Include="Migrations\202108240544453_migracionInicial2.designer.cs">
+      <DependentUpon>202108240544453_migracionInicial2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas de Mantenimiento\AdmMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108240412240_migracionInicial1.resx">
       <DependentUpon>202108240412240_migracionInicial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108240544453_migracionInicial2.resx">
+      <DependentUpon>202108240544453_migracionInicial2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas de Mantenimiento\AdmMarcas.resx">
       <DependentUpon>AdmMarcas.cs</DependentUpon>

@@ -11,6 +11,6 @@ namespace VentaVehiculos.DataModel.Entities
     public class TipoTransmision: BaseEntity
     {
         public string Nombre { get; set; }
-        public List<Modelo> Modelos { get; set; }
+        public List<Vehiculo> Vehiculos { get; set; }
     }
 }
