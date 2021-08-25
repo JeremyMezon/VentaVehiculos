@@ -58,5 +58,11 @@ namespace VentaVehiculos
             Vehiculos vehiculos = new Vehiculos();
             vehiculos.ShowDialog();
         }
+
+        private void ventaDeVehiculoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            ventas.ShowDialog();
+        }
     }
 }

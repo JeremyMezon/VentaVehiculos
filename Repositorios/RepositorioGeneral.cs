@@ -34,6 +34,7 @@ namespace VentaVehiculos.Repositorios
         }
         public List<T> GetAll()
         {
+
             if (_set.Any())
             {
                 return _set.Where(x => x.Borrado == false && x.Estatus != "IN").ToList();

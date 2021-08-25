@@ -134,26 +134,26 @@ namespace VentaVehiculos.DataModel.Context
 
             #endregion
 
-            #region VentaVehiculo
+            //#region VentaVehiculo
 
-            modelBuilder.Entity<Venta>()
-                .ToTable("VentaVehiculo")
-                .HasKey(k => k.Id);
+            //modelBuilder.Entity<Venta>()
+            //    .ToTable("VentaVehiculo")
+            //    .HasKey(k => k.Id);
 
-            modelBuilder.Entity<Venta>()
-                .Property(p => p.Id)
-                .HasColumnName("VentaVehiculoID");
+            //modelBuilder.Entity<Venta>()
+            //    .Property(p => p.Id)
+            //    .HasColumnName("VentaVehiculoID");
 
-            modelBuilder.Entity<Venta>()
-                .Property(p => p.Precio)
-                .HasColumnType("int");
+            //modelBuilder.Entity<Venta>()
+            //    .Property(p => p.Precio)
+            //    .HasColumnType("int");
 
-            modelBuilder.Entity<Venta>()
-                .HasRequired(p => p.Vehiculo)
-                .WithMany()
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Venta>()
+            //    .HasRequired(p => p.Vehiculo)
+            //    .WithMany()
+            //    .WillCascadeOnDelete(false);
 
-            #endregion
+            //#endregion
 
             #region TipoCombustible
 
@@ -190,6 +190,16 @@ namespace VentaVehiculos.DataModel.Context
                 .HasColumnType("varchar");
 
             #endregion
+
+            modelBuilder.Entity<Venta>()
+                .ToTable("Venta")
+                .HasKey(k => k.Id);
+
+            modelBuilder.Entity<Venta>()
+                .Property(p => p.MetodoPago)
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnType("varchar");
         }
 
     }

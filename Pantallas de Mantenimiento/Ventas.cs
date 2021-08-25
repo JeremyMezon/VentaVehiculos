@@ -22,7 +22,21 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         void actualizarTabla()
         {
             VentaRepositorio ventaRepositorio = new VentaRepositorio();
-            dataVenta.DataSource = ventaRepositorio.GetAll();
+            //dataVenta.DataSource = ventaRepositorio.GetAll();
+            var datosVenta = ventaRepositorio.GetAll();
+            if (datosVenta.Count > 0)
+            {
+                dataVenta.DataSource = ventaRepositorio.GetAll().Select(x => new
+                {
+                    x.Id,
+                    x.MetodoPago,
+                    x.Cliente.Nombre,
+                    x.Vehiculo.Modelo.NombreModelo,
+                    x.Precio,
+                    x.FechaRegistro,
+                    x.FechaActualizacion
+                }).ToList();
+            }
 
         }
 
@@ -46,7 +60,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 int filaSeleccionada = dataVenta.CurrentCell.RowIndex;
                 int IDVenta = int.Parse(dataVenta.Rows[filaSeleccionada].Cells["Id"].Value.ToString());
                 venta = ventaRepositorio.FIndById(IDVenta);
-                AdmVentas admVentas = new AdmVentas(/*venta*/);
+                AdmVentas admVentas = new AdmVentas(venta);
                 admVentas.ShowDialog();
             }
             else

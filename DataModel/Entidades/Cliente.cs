@@ -23,6 +23,7 @@ namespace VentaVehiculos.DataModel.Entities
         
         public string Cedula { get; set; }
 
+        public virtual List<Venta> ventas { get; set; }
 
 
 

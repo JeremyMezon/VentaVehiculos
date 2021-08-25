@@ -41,6 +41,10 @@
             this.btnGuardarVenta = new System.Windows.Forms.Button();
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuSeparator1
@@ -48,10 +52,10 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(19, 91);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(13, 59);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(550, 27);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(367, 18);
             this.bunifuSeparator1.TabIndex = 35;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -60,10 +64,9 @@
             // 
             this.LbTituloVenta.AutoSize = true;
             this.LbTituloVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTituloVenta.Location = new System.Drawing.Point(13, 34);
-            this.LbTituloVenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LbTituloVenta.Location = new System.Drawing.Point(9, 22);
             this.LbTituloVenta.Name = "LbTituloVenta";
-            this.LbTituloVenta.Size = new System.Drawing.Size(271, 48);
+            this.LbTituloVenta.Size = new System.Drawing.Size(190, 32);
             this.LbTituloVenta.TabIndex = 34;
             this.LbTituloVenta.Text = "Nueva Venta";
             this.LbTituloVenta.Click += new System.EventHandler(this.LbTituloMarca_Click);
@@ -72,10 +75,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 127);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(14, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 29);
+            this.label5.Size = new System.Drawing.Size(62, 20);
             this.label5.TabIndex = 33;
             this.label5.Text = "Cliente:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -87,10 +89,9 @@
             this.comboClientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboClientes.FormattingEnabled = true;
-            this.comboClientes.Location = new System.Drawing.Point(247, 131);
-            this.comboClientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboClientes.Location = new System.Drawing.Point(165, 85);
             this.comboClientes.Name = "comboClientes";
-            this.comboClientes.Size = new System.Drawing.Size(302, 28);
+            this.comboClientes.Size = new System.Drawing.Size(203, 21);
             this.comboClientes.TabIndex = 44;
             this.comboClientes.SelectedIndexChanged += new System.EventHandler(this.comboClientes_SelectedIndexChanged);
             // 
@@ -101,20 +102,18 @@
             this.comboVehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboVehiculo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboVehiculo.FormattingEnabled = true;
-            this.comboVehiculo.Location = new System.Drawing.Point(247, 182);
-            this.comboVehiculo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboVehiculo.Location = new System.Drawing.Point(165, 118);
             this.comboVehiculo.Name = "comboVehiculo";
-            this.comboVehiculo.Size = new System.Drawing.Size(302, 28);
+            this.comboVehiculo.Size = new System.Drawing.Size(203, 21);
             this.comboVehiculo.TabIndex = 46;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 178);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(14, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
+            this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 45;
             this.label1.Text = "Vehiculo:";
             // 
@@ -122,10 +121,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 239);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(14, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 29);
+            this.label2.Size = new System.Drawing.Size(130, 20);
             this.label2.TabIndex = 47;
             this.label2.Text = "Metodo de Pago:";
             // 
@@ -140,29 +138,26 @@
             "Efectivo",
             "Tarjeta",
             "Cheque"});
-            this.comboMetodoPago.Location = new System.Drawing.Point(247, 239);
-            this.comboMetodoPago.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboMetodoPago.Location = new System.Drawing.Point(165, 155);
             this.comboMetodoPago.Name = "comboMetodoPago";
-            this.comboMetodoPago.Size = new System.Drawing.Size(302, 28);
+            this.comboMetodoPago.Size = new System.Drawing.Size(203, 21);
             this.comboMetodoPago.TabIndex = 49;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(247, 298);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPrecio.Location = new System.Drawing.Point(165, 194);
             this.txtPrecio.MaxLength = 100;
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(302, 26);
+            this.txtPrecio.Size = new System.Drawing.Size(203, 20);
             this.txtPrecio.TabIndex = 50;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 298);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(14, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 29);
+            this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 51;
             this.label3.Text = "Precio RD$:";
             // 
@@ -173,10 +168,9 @@
             this.btnGuardarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarVenta.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarVenta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGuardarVenta.Location = new System.Drawing.Point(339, 429);
-            this.btnGuardarVenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardarVenta.Location = new System.Drawing.Point(226, 279);
             this.btnGuardarVenta.Name = "btnGuardarVenta";
-            this.btnGuardarVenta.Size = new System.Drawing.Size(210, 54);
+            this.btnGuardarVenta.Size = new System.Drawing.Size(140, 35);
             this.btnGuardarVenta.TabIndex = 52;
             this.btnGuardarVenta.Text = "Guardar";
             this.btnGuardarVenta.UseVisualStyleBackColor = false;
@@ -192,28 +186,63 @@
             this.comboEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.comboEstado.Location = new System.Drawing.Point(247, 344);
-            this.comboEstado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboEstado.Location = new System.Drawing.Point(165, 224);
             this.comboEstado.Name = "comboEstado";
-            this.comboEstado.Size = new System.Drawing.Size(302, 28);
+            this.comboEstado.Size = new System.Drawing.Size(203, 21);
             this.comboEstado.TabIndex = 54;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 344);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(14, 224);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 29);
+            this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 53;
             this.label7.Text = "Estado";
             // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.label6);
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(398, 76);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(362, 269);
+            this.bunifuCards1.TabIndex = 55;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(394, 39);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(164, 24);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Datos del vehiculo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 19);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "label6";
+            // 
             // AdmVentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 497);
+            this.ClientSize = new System.Drawing.Size(772, 368);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.comboEstado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnGuardarVenta);
@@ -227,8 +256,12 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.LbTituloVenta);
             this.Controls.Add(this.label5);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdmVentas";
             this.Text = "AdmVentas";
+            this.Load += new System.EventHandler(this.AdmVentas_Load_1);
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +282,8 @@
         private System.Windows.Forms.Button btnGuardarVenta;
         private System.Windows.Forms.ComboBox comboEstado;
         private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label4;
     }
 }

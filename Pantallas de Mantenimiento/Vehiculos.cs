@@ -53,7 +53,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 int filaSeleccionada = dataVehiculos.CurrentCell.RowIndex;
                 int IDVehiculo = int.Parse(dataVehiculos.Rows[filaSeleccionada].Cells["Id"].Value.ToString());
                 vehiculo = vehiculoRepositorio.FIndById(IDVehiculo);
-                AdmVehiculos admVehiculos = new AdmVehiculos(/*vehiculo*/);
+                AdmVehiculos admVehiculos = new AdmVehiculos(vehiculo);
                 admVehiculos.ShowDialog();
             }
             else

@@ -112,6 +112,7 @@
             this.ventaDeVehiculoToolStripMenuItem.Name = "ventaDeVehiculoToolStripMenuItem";
             this.ventaDeVehiculoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.ventaDeVehiculoToolStripMenuItem.Text = "Venta de Vehiculo";
+            this.ventaDeVehiculoToolStripMenuItem.Click += new System.EventHandler(this.ventaDeVehiculoToolStripMenuItem_Click);
             // 
             // Principal
             // 

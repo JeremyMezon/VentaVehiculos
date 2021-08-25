@@ -20,16 +20,6 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         private void AdmVentas_Load(object sender, EventArgs e)
         {
 
-            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
-            comboClientes.DisplayMember = "Nombre";
-            comboClientes.ValueMember = "Id";
-            comboClientes.DataSource = clienteRepositorio.GetAll();
-
-
-            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
-            comboVehiculo.DisplayMember = "Nombre";
-            comboVehiculo.ValueMember = "Id";
-            comboVehiculo.DataSource = vehiculoRepositorio.GetAll();
 
 
         }
@@ -44,9 +34,6 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             InitializeComponent();
             LbTituloVenta.Text = "Modificar Venta";
             this.venta = _venta;
-            comboClientes.SelectedIndex = int.Parse(comboClientes.SelectedItem.ToString());
-            comboVehiculo.SelectedIndex = int.Parse(comboVehiculo.SelectedItem.ToString());
-            comboMetodoPago.SelectedIndex = int.Parse(comboMetodoPago.SelectedItem.ToString());
             txtPrecio.Text = _venta.Precio.ToString();
             if (_venta.Estatus == "AC")
             {
@@ -109,8 +96,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 venta.Id = this.venta.Id;
             }
 
-            venta.ClienteId = int.Parse(comboClientes.SelectedItem.ToString());
-            venta.VehiculoId = int.Parse(comboVehiculo.SelectedItem.ToString());
+            venta.ClienteId = int.Parse(comboClientes.SelectedValue.ToString());
+            venta.VehiculoId = int.Parse(comboVehiculo.SelectedValue.ToString());
             venta.MetodoPago = comboMetodoPago.SelectedItem.ToString();
             venta.Precio = int.Parse(txtPrecio.Text);
             venta.Estatus = estado;
@@ -152,6 +139,28 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         private void comboClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AdmVentas_Load_1(object sender, EventArgs e)
+        {
+
+            ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
+            comboClientes.DisplayMember = "Nombre";
+            comboClientes.ValueMember = "Id";
+            comboClientes.DataSource = clienteRepositorio.GetAll();
+
+            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
+            comboVehiculo.DisplayMember = "NombreModelo";
+            comboVehiculo.ValueMember = "Id";
+            comboVehiculo.DataSource = vehiculoRepositorio.GetAll().Select(x => new {x.Id, x.Modelo.NombreModelo }).ToList();
+
+            if (this.esModificacion)
+            {
+
+                comboClientes.SelectedValue = venta.ClienteId;
+                comboVehiculo.SelectedValue = venta.VehiculoId;
+                comboMetodoPago.SelectedItem = venta.MetodoPago;
+            }
         }
     }
 }

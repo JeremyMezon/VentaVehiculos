@@ -31,6 +31,12 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             comboMarcas.ValueMember = "Id";
             comboMarcas.DataSource = marcaRep.GetAll();
 
+            if (this.esModificacion)
+            {
+
+                comboMarcas.SelectedValue = modelo.Marca.Id;
+            }
+
         }
 
         public AdmModelos(Modelo _modelo)
@@ -55,7 +61,6 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 comboEstado.SelectedItem = "Inactivo";
             }
 
-            comboMarcas.SelectedValue = FkMarca;
             esModificacion = true;
         }
 

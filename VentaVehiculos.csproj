@@ -93,6 +93,22 @@
     <Compile Include="Migrations\202108250704356_migracionInicial4.designer.cs">
       <DependentUpon>202108250704356_migracionInicial4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108251649101_migracionInicial5.cs" />
+    <Compile Include="Migrations\202108251649101_migracionInicial5.designer.cs">
+      <DependentUpon>202108251649101_migracionInicial5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251732097_migracionInicial21.cs" />
+    <Compile Include="Migrations\202108251732097_migracionInicial21.designer.cs">
+      <DependentUpon>202108251732097_migracionInicial21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251736418_migracionInicial22.cs" />
+    <Compile Include="Migrations\202108251736418_migracionInicial22.designer.cs">
+      <DependentUpon>202108251736418_migracionInicial22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251801419_migracionInicial23.cs" />
+    <Compile Include="Migrations\202108251801419_migracionInicial23.designer.cs">
+      <DependentUpon>202108251801419_migracionInicial23.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas de Mantenimiento\AdmMarcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +231,18 @@
     <EmbeddedResource Include="Migrations\202108250704356_migracionInicial4.resx">
       <DependentUpon>202108250704356_migracionInicial4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251649101_migracionInicial5.resx">
+      <DependentUpon>202108251649101_migracionInicial5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251732097_migracionInicial21.resx">
+      <DependentUpon>202108251732097_migracionInicial21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251736418_migracionInicial22.resx">
+      <DependentUpon>202108251736418_migracionInicial22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251801419_migracionInicial23.resx">
+      <DependentUpon>202108251801419_migracionInicial23.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas de Mantenimiento\AdmMarcas.resx">
       <DependentUpon>AdmMarcas.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas de Mantenimiento\AdmVehiculos.resx">
       <DependentUpon>AdmVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\AdmVentas.resx">
+      <DependentUpon>AdmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas de Mantenimiento\Marcas.resx">
       <DependentUpon>Marcas.cs</DependentUpon>
