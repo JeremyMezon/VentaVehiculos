@@ -28,7 +28,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             InitializeComponent();
             LbTituloCombustible.Text = "Modificar Tipo de Combustible";
             this.tipocombustible = _tipoCombustible;
-            txtNombreCombustible.Text = _tipoCombustible.Nombre;
+            txtNombreCombustible.Text = _tipoCombustible.NombreCombustible;
             if (_tipoCombustible.Estatus == "AC")
             {
                 comboEstado.SelectedItem = "Activo";
@@ -79,7 +79,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 tipoCombustible.Id = this.tipocombustible.Id;
             }
 
-            tipoCombustible.Nombre = txtNombreCombustible.Text;
+            tipoCombustible.NombreCombustible = txtNombreCombustible.Text;
             tipoCombustible.Estatus = estado;
             tipoCombustible.Borrado = false;
             tipoCombustible.FechaRegistro = esModificacion ? this.tipocombustible.FechaRegistro : DateTime.Now;

@@ -21,13 +21,16 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
 
         private void btnActualizarTablaVehiculos_Click(object sender, EventArgs e)
         {
-
+            actualizarTabla();
         }
 
         void actualizarTabla()
         {
             VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
-            dataVehiculos.DataSource = vehiculoRepositorio.GetAll();
+            var datosVehiculo = vehiculoRepositorio.GetAll();
+            dataVehiculos.DataSource = datosVehiculo.Select(x => new { 
+                x.Id, x.Chasis, x.Placa, x.Color, x.Kilometraje, x.Precio, x.CantidadPuertas, x.Anio, x.Cilindraje, x.TipoCombustible.NombreCombustible,x.Modelo.NombreModelo,x.TipoTransmision.NombreTransmision
+            }).ToList();
         }
 
         private void dataVehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)

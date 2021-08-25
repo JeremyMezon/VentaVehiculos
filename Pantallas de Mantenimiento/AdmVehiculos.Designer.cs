@@ -31,7 +31,7 @@
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.LbTituloCliente = new System.Windows.Forms.Label();
+            this.LbTituloVehiculo = new System.Windows.Forms.Label();
             this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.txtKilometraje = new System.Windows.Forms.TextBox();
             this.txtCilindraje = new System.Windows.Forms.TextBox();
@@ -94,15 +94,15 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // LbTituloCliente
+            // LbTituloVehiculo
             // 
-            this.LbTituloCliente.AutoSize = true;
-            this.LbTituloCliente.Font = new System.Drawing.Font("Lato", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTituloCliente.Location = new System.Drawing.Point(12, 18);
-            this.LbTituloCliente.Name = "LbTituloCliente";
-            this.LbTituloCliente.Size = new System.Drawing.Size(213, 34);
-            this.LbTituloCliente.TabIndex = 30;
-            this.LbTituloCliente.Text = "Nuevo Vehiculo";
+            this.LbTituloVehiculo.AutoSize = true;
+            this.LbTituloVehiculo.Font = new System.Drawing.Font("Lato", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbTituloVehiculo.Location = new System.Drawing.Point(12, 18);
+            this.LbTituloVehiculo.Name = "LbTituloVehiculo";
+            this.LbTituloVehiculo.Size = new System.Drawing.Size(213, 34);
+            this.LbTituloVehiculo.TabIndex = 30;
+            this.LbTituloVehiculo.Text = "Nuevo Vehiculo";
             // 
             // btnGuardarCliente
             // 
@@ -354,7 +354,7 @@
             this.Controls.Add(this.comboEstado);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.LbTituloCliente);
+            this.Controls.Add(this.LbTituloVehiculo);
             this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.txtKilometraje);
             this.Controls.Add(this.txtCilindraje);
@@ -380,7 +380,7 @@
         private System.Windows.Forms.ComboBox comboEstado;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        public System.Windows.Forms.Label LbTituloCliente;
+        public System.Windows.Forms.Label LbTituloVehiculo;
         private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.TextBox txtKilometraje;
         private System.Windows.Forms.TextBox txtCilindraje;

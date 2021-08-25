@@ -57,7 +57,19 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         void actualizarTabla()
         {
             ClienteRepositorio clienteRepositorio = new ClienteRepositorio();
-            dataClientes.DataSource = clienteRepositorio.GetAll();
+            var datosClientes = clienteRepositorio.GetAll();
+            dataClientes.DataSource = datosClientes.Select(x => new
+            {
+                x.Id,
+                x.Nombre,
+                x.Apellido,
+                x.Cedula,
+                x.Correo,
+                x.Direccion,
+                x.FechaRegistro,
+                x.FechaActualizacion,
+                x.Telefono
+            }).ToList();
 
         }
 

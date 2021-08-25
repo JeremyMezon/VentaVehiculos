@@ -10,9 +10,9 @@ namespace VentaVehiculos.DataModel.Entities
 {
     public class Vehiculo: BaseEntity
     {
-        public string TipoTransmisionId { get; set; }
+        public int? TipoTransmisionId { get; set; }
         public virtual TipoTransmision TipoTransmision { get; set; }
-        public string TipoCombustibleId { get; set; }
+        public int? TipoCombustibleId { get; set; }
         public virtual TipoCombustible TipoCombustible { get; set; }
         public string Placa { get; set; }
         public string Chasis { get; set; }

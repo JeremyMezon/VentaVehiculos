@@ -44,7 +44,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             
             LbTituloModelo.Text = "Modificar Modelo";
             this.modelo = _modelo;
-            txtNombreModelo.Text = _modelo.Nombre;
+            txtNombreModelo.Text = _modelo.NombreModelo;
+
             if (_modelo.Estatus == "AC")
             {
                 comboEstado.SelectedItem = "Activo";
@@ -98,7 +99,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 modelo.Id = this.modelo.Id;
             }
 
-            modelo.Nombre = txtNombreModelo.Text;
+            modelo.NombreModelo = txtNombreModelo.Text;
             modelo.MarcaId = int.Parse(comboMarcas.SelectedValue.ToString());
             modelo.Estatus = estado;
             modelo.Borrado = false;

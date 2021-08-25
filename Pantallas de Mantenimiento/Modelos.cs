@@ -27,7 +27,15 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
         void actualizarTabla()
         {
             ModeloRepositorio modeloRepositorio = new ModeloRepositorio();
-            dataModelos.DataSource = modeloRepositorio.GetAll();
+            var datosModelo = modeloRepositorio.GetAll();
+            dataModelos.DataSource = datosModelo.Select(x => new
+            {
+                x.Id,
+                x.NombreModelo,
+                x.Marca.Nombre,
+                x.FechaRegistro,
+                x.FechaActualizacion
+            }).ToList();
 
         }
 

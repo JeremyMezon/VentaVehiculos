@@ -10,7 +10,7 @@ namespace VentaVehiculos.DataModel.Entities
 {
     public class Modelo: BaseEntity
     {
-        public string Nombre { get; set; }
+        public string NombreModelo { get; set; }
         public int MarcaId { get; set; }
         public virtual Marca Marca { get; set; }
         

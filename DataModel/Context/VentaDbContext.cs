@@ -96,7 +96,7 @@ namespace VentaVehiculos.DataModel.Context
                 .HasColumnName("ModeloID");
 
             modelBuilder.Entity<Modelo>()
-                .Property(p => p.Nombre)
+                .Property(p => p.NombreModelo)
                 .IsRequired()
                 .HasMaxLength(100)
                 .HasColumnType("varchar");
@@ -166,7 +166,7 @@ namespace VentaVehiculos.DataModel.Context
                 .HasColumnName("TipoCombustibleID");
 
             modelBuilder.Entity<TipoCombustible>()
-                .Property(p => p.Nombre)
+                .Property(p => p.NombreCombustible)
                 .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnType("varchar");
@@ -184,7 +184,7 @@ namespace VentaVehiculos.DataModel.Context
                 .HasColumnName("TipoTransmisionID");
 
             modelBuilder.Entity<TipoTransmision>()
-                .Property(p => p.Nombre)
+                .Property(p => p.NombreTransmision)
                 .IsRequired()
                 .HasMaxLength(50)
                 .HasColumnType("varchar");

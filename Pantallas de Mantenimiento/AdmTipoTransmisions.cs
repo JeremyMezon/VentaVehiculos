@@ -27,7 +27,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             InitializeComponent();
             LbTituloCombustible.Text = "Modificar Tipo de Transimision";
             this.tipoTransmision = _tipoTransmision;
-            txtNombreTransmision.Text = _tipoTransmision.Nombre;
+            txtNombreTransmision.Text = _tipoTransmision.NombreTransmision;
             if (_tipoTransmision.Estatus == "AC")
             {
                 comboEstado.SelectedItem = "Activo";
@@ -79,7 +79,7 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 tipoTransmision.Id = this.tipoTransmision.Id;
             }
 
-            tipoTransmision.Nombre = txtNombreTransmision.Text;
+            tipoTransmision.NombreTransmision = txtNombreTransmision.Text;
             tipoTransmision.Estatus = estado;
             tipoTransmision.Borrado = false;
             tipoTransmision.FechaRegistro = esModificacion ? this.tipoTransmision.FechaRegistro : DateTime.Now;

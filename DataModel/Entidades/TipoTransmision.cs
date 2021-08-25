@@ -10,7 +10,7 @@ namespace VentaVehiculos.DataModel.Entities
 {
     public class TipoTransmision: BaseEntity
     {
-        public string Nombre { get; set; }
+        public string NombreTransmision { get; set; }
         public virtual List<Vehiculo> Vehiculos { get; set; }
     }
 }
