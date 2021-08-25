@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VentaVehiculos.DataModel.Entities;
 using VentaVehiculos.Repositorios;
 
 namespace VentaVehiculos.Pantallas_de_Mantenimiento
@@ -36,22 +37,56 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
 
         private void btnNuevoVehiculo_Click(object sender, EventArgs e)
         {
-
+            AdmVehiculos admVehiculos = new AdmVehiculos();
+            admVehiculos.ShowDialog();
         }
 
         private void btnModificarVehiculo_Click(object sender, EventArgs e)
         {
-
+            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
+            Vehiculo vehiculo = new Vehiculo();
+            if (dataVehiculos.Rows.Count > 0 && dataVehiculos.SelectedRows.Count > 0)
+            {
+                int filaSeleccionada = dataVehiculos.CurrentCell.RowIndex;
+                int IDVehiculo = int.Parse(dataVehiculos.Rows[filaSeleccionada].Cells["Id"].Value.ToString());
+                vehiculo = vehiculoRepositorio.FIndById(IDVehiculo);
+                AdmVehiculos admVehiculos = new AdmVehiculos(/*vehiculo*/);
+                admVehiculos.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila", "Fila no seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnEliminarVehiculo_Click(object sender, EventArgs e)
         {
+            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
+            Vehiculo vehiculo = new Vehiculo();
+            if (dataVehiculos.Rows.Count > 0 && dataVehiculos.SelectedRows.Count > 0)
+            {
+                int filaSeleccionada = dataVehiculos.CurrentCell.RowIndex;
+                int IDVehiculo = int.Parse(dataVehiculos.Rows[filaSeleccionada].Cells["Id"].Value.ToString());
+                vehiculo = vehiculoRepositorio.FIndById(IDVehiculo);
 
+                DialogResult dialogResult = MessageBox.Show("Estas seguro de que deseas eliminar este registro?", "Eliminar registro", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    vehiculoRepositorio.Eliminar(vehiculo);
+                    MessageBox.Show("Registro eliminado correctamente", "Registro Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione una fila", "Fila no seleccionada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void Vehiculos_Load(object sender, EventArgs e)
         {
-
+            actualizarTabla();
         }
     }
 }

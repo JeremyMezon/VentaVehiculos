@@ -12,8 +12,8 @@ namespace VentaVehiculos.DataModel.Entities
     {
         public string Nombre { get; set; }
         public int MarcaId { get; set; }
-        public Marca Marca { get; set; }
+        public virtual Marca Marca { get; set; }
         
-        public List<Vehiculo> Vehiculos { get; set; }
+        public virtual List<Vehiculo> Vehiculos { get; set; }
     }
 }

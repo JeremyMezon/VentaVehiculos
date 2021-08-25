@@ -1,6 +1,6 @@
 ﻿namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
-    partial class TipoCombustible
+    partial class TipoCombustibles
     {
         /// <summary>
         /// Required designer variable.

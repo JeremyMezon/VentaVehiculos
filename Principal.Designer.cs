@@ -77,6 +77,7 @@
             this.vehiculosToolStripMenuItem.Name = "vehiculosToolStripMenuItem";
             this.vehiculosToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.vehiculosToolStripMenuItem.Text = "Vehiculos";
+            this.vehiculosToolStripMenuItem.Click += new System.EventHandler(this.vehiculosToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
@@ -97,12 +98,14 @@
             this.tipoDeTransmisionToolStripMenuItem.Name = "tipoDeTransmisionToolStripMenuItem";
             this.tipoDeTransmisionToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.tipoDeTransmisionToolStripMenuItem.Text = "Tipo de Transmision";
+            this.tipoDeTransmisionToolStripMenuItem.Click += new System.EventHandler(this.tipoDeTransmisionToolStripMenuItem_Click);
             // 
             // tipoDeCombustibleToolStripMenuItem
             // 
             this.tipoDeCombustibleToolStripMenuItem.Name = "tipoDeCombustibleToolStripMenuItem";
             this.tipoDeCombustibleToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.tipoDeCombustibleToolStripMenuItem.Text = "Tipo de Combustible";
+            this.tipoDeCombustibleToolStripMenuItem.Click += new System.EventHandler(this.tipoDeCombustibleToolStripMenuItem_Click);
             // 
             // ventaDeVehiculoToolStripMenuItem
             // 

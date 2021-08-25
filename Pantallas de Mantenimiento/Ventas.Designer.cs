@@ -1,6 +1,6 @@
 ﻿namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
-    partial class Venta
+    partial class Ventas
     {
         /// <summary>
         /// Required designer variable.

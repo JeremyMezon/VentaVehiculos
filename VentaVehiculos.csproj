@@ -97,6 +97,30 @@
     <Compile Include="Pantallas de Mantenimiento\AdmModelos.Designer.cs">
       <DependentUpon>AdmModelos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmTipoCombustibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmTipoCombustibles.Designer.cs">
+      <DependentUpon>AdmTipoCombustibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmTipoTransmisions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmTipoTransmisions.Designer.cs">
+      <DependentUpon>AdmTipoTransmisions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmVehiculos.Designer.cs">
+      <DependentUpon>AdmVehiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas de Mantenimiento\AdmVentas.Designer.cs">
+      <DependentUpon>AdmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas de Mantenimiento\Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,23 +133,23 @@
     <Compile Include="Pantallas de Mantenimiento\Modelos.Designer.cs">
       <DependentUpon>Modelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas de Mantenimiento\TipoCombustible.cs">
+    <Compile Include="Pantallas de Mantenimiento\TipoCombustibles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas de Mantenimiento\TipoCombustible.Designer.cs">
-      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    <Compile Include="Pantallas de Mantenimiento\TipoCombustibles.Designer.cs">
+      <DependentUpon>TipoCombustibles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas de Mantenimiento\TipoTransmision.cs">
+    <Compile Include="Pantallas de Mantenimiento\TipoTransmisions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas de Mantenimiento\TipoTransmision.Designer.cs">
-      <DependentUpon>TipoTransmision.cs</DependentUpon>
+    <Compile Include="Pantallas de Mantenimiento\TipoTransmisions.Designer.cs">
+      <DependentUpon>TipoTransmisions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas de Mantenimiento\Venta.cs">
+    <Compile Include="Pantallas de Mantenimiento\Ventas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas de Mantenimiento\Venta.Designer.cs">
-      <DependentUpon>Venta.cs</DependentUpon>
+    <Compile Include="Pantallas de Mantenimiento\Ventas.Designer.cs">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -183,20 +207,29 @@
     <EmbeddedResource Include="Pantallas de Mantenimiento\AdmModelos.resx">
       <DependentUpon>AdmModelos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\AdmTipoCombustibles.resx">
+      <DependentUpon>AdmTipoCombustibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\AdmTipoTransmisions.resx">
+      <DependentUpon>AdmTipoTransmisions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\AdmVehiculos.resx">
+      <DependentUpon>AdmVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas de Mantenimiento\Marcas.resx">
       <DependentUpon>Marcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas de Mantenimiento\Modelos.resx">
       <DependentUpon>Modelos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas de Mantenimiento\TipoCombustible.resx">
-      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\TipoCombustibles.resx">
+      <DependentUpon>TipoCombustibles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas de Mantenimiento\TipoTransmision.resx">
-      <DependentUpon>TipoTransmision.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\TipoTransmisions.resx">
+      <DependentUpon>TipoTransmisions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas de Mantenimiento\Venta.resx">
-      <DependentUpon>Venta.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas de Mantenimiento\Ventas.resx">
+      <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

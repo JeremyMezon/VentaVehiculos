@@ -11,9 +11,9 @@ namespace VentaVehiculos.DataModel.Entities
     public class Vehiculo: BaseEntity
     {
         public string TipoTransmisionId { get; set; }
-        public TipoTransmision TipoTransmision { get; set; }
+        public virtual TipoTransmision TipoTransmision { get; set; }
         public string TipoCombustibleId { get; set; }
-        public TipoCombustible TipoCombustible { get; set; }
+        public virtual TipoCombustible TipoCombustible { get; set; }
         public string Placa { get; set; }
         public string Chasis { get; set; }
         public string Anio { get; set; }
@@ -22,7 +22,7 @@ namespace VentaVehiculos.DataModel.Entities
         public string KilometrosTablero { get; set; }
         public int Precio { get; set; }
         public int? ModeloId { get; set; }
-        public Modelo Modelo { get; set; }
+        public virtual Modelo Modelo { get; set; }
         public string Kilometraje { get; set; }
         public int CantidadPuertas { get; set; }
 

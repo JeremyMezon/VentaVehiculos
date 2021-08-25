@@ -14,25 +14,113 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
     public partial class AdmModelos : Form
     {
+        private Modelo modelo { get; set; }
+        private bool esModificacion = false;
         public AdmModelos()
         {
             InitializeComponent();
+            comboEstado.SelectedIndex = 0;
+        }
+
+
+        private void AdmModelos_Load(object sender, EventArgs e)
+        {
+
+            MarcaRepositorio marcaRep = new MarcaRepositorio();
+            comboMarcas.DisplayMember = "Nombre";
+            comboMarcas.ValueMember = "Id";
+            comboMarcas.DataSource = marcaRep.GetAll();
+
+        }
+
+        public AdmModelos(Modelo _modelo)
+        {
+            InitializeComponent();
+            MarcaRepositorio marcaRep = new MarcaRepositorio();
+            comboMarcas.DisplayMember = "Nombre";
+            comboMarcas.ValueMember = "Id";
+            comboMarcas.DataSource = marcaRep.GetAll();
+            int FkMarca = _modelo.Marca.Id;
+            
+            LbTituloModelo.Text = "Modificar Modelo";
+            this.modelo = _modelo;
+            txtNombreModelo.Text = _modelo.Nombre;
+            if (_modelo.Estatus == "AC")
+            {
+                comboEstado.SelectedItem = "Activo";
+            }
+            else
+            {
+                comboEstado.SelectedItem = "Inactivo";
+            }
+
+            comboMarcas.SelectedValue = FkMarca;
+            esModificacion = true;
         }
 
         private void btnGuardarMarca_Click(object sender, EventArgs e)
         {
+            if (validacionModelos())
+            {
+                ModeloRepositorio modeloRepositorio = new ModeloRepositorio();
+                Modelo modelo = this.capturarModelo();
 
+                if (this.esModificacion)
+                {
+                    modeloRepositorio.Modificar(modelo);
+                    MessageBox.Show("Datos actualizados correctamente", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    var feedback = modeloRepositorio.Crear(modelo);
+
+                    if (feedback.Success)
+                    {
+                        MessageBox.Show(feedback.Message, "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(feedback.Message, "No se pudo guardar los datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+            }
         }
 
-        private void AdmModelos_Load(object sender, EventArgs e)
-        {
-            Marca marca = new Marca();
-            MarcaRepositorio marcaRep = new MarcaRepositorio();
-            comboMarcas.DisplayMember = marca.Nombre;
-            comboMarcas.ValueMember = marca.Id.ToString();
-            comboMarcas.DataSource = marcaRep.GetAll();
-            
 
+        Modelo capturarModelo()
+        {
+            Modelo modelo = new Modelo();
+            string estado = comboEstado.SelectedItem.ToString().Substring(0, 2).ToUpper();
+
+            if (esModificacion)
+            {
+                modelo.Id = this.modelo.Id;
+            }
+
+            modelo.Nombre = txtNombreModelo.Text;
+            modelo.MarcaId = int.Parse(comboMarcas.SelectedValue.ToString());
+            modelo.Estatus = estado;
+            modelo.Borrado = false;
+            modelo.FechaRegistro = esModificacion ? this.modelo.FechaRegistro : DateTime.Now;
+            modelo.FechaActualizacion = DateTime.Now;
+
+            return modelo;
+        }
+
+        bool validacionModelos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombreModelo.Text))
+            {
+                MessageBox.Show("El modelo no puede estar vacio", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if(comboMarcas.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe tomar una marca", "Campos vacios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

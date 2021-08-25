@@ -1,6 +1,6 @@
 ﻿namespace VentaVehiculos.Pantallas_de_Mantenimiento
 {
-    partial class TipoTransmision
+    partial class TipoTransmisions
     {
         /// <summary>
         /// Required designer variable.

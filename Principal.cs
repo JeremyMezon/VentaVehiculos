@@ -40,5 +40,23 @@ namespace VentaVehiculos
             Modelos modelos = new Modelos();
             modelos.ShowDialog();
         }
+
+        private void tipoDeCombustibleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoCombustibles tipoCombustibles = new TipoCombustibles();
+            tipoCombustibles.ShowDialog();
+        }
+
+        private void tipoDeTransmisionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoTransmisions tipoTransmisions = new TipoTransmisions();
+            tipoTransmisions.ShowDialog();
+        }
+
+        private void vehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Vehiculos vehiculos = new Vehiculos();
+            vehiculos.ShowDialog();
+        }
     }
 }

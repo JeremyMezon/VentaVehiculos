@@ -12,7 +12,7 @@ namespace VentaVehiculos.DataModel.Entities
     {
         public string Nombre { get; set; }
 
-        public List<Vehiculo> Vehiculos { get; set; }
+        public virtual List<Vehiculo> Vehiculos { get; set; }
 
     }
 }

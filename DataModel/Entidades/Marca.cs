@@ -12,6 +12,6 @@ namespace VentaVehiculos.DataModel.Entities
     {
         public string Nombre { get; set; }
 
-        public List<Modelo> Modelos { get; set; }
+        public virtual List<Modelo> Modelos { get; set; }
     }
 }
