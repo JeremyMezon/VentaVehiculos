@@ -26,8 +26,22 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
 
         void actualizarTabla()
         {
-            TipoTransmisionRepositorio transmisionRepositorio = new TipoTransmisionRepositorio();
-            dataTransmision.DataSource = transmisionRepositorio.GetAll();
+            try
+            {
+                TipoTransmisionRepositorio transmisionRepositorio = new TipoTransmisionRepositorio();
+                dataTransmision.DataSource = transmisionRepositorio.GetAll().Select(x => new
+                {
+                    x.Id,
+                    x.NombreTransmision,
+                    x.Vehiculos,
+                    x.FechaRegistro,
+                    x.FechaActualizacion
+                }).ToList() ;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("No hay datos que mostrar en la tabla");
+            }
         }
 
         private void TipoTransmision_Load(object sender, EventArgs e)

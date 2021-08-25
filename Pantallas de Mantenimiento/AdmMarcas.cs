@@ -50,6 +50,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 {
                     marcaRepositorio.Modificar(marca);
                     MessageBox.Show("Datos actualizados correctamente", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
                 }
                 else
                 {
@@ -58,6 +60,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                     if (feedback.Success)
                     {
                         MessageBox.Show(feedback.Message, "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Close();
                     }
                     else
                     {

@@ -42,8 +42,17 @@
             this.comboEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.LbVehiculoCombustible = new System.Windows.Forms.Label();
+            this.LbVehiculoAnio = new System.Windows.Forms.Label();
+            this.LbVehiculoColor = new System.Windows.Forms.Label();
+            this.LbVehiculoTransmision = new System.Windows.Forms.Label();
+            this.LbVehiculoPrecio = new System.Windows.Forms.Label();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,6 +115,7 @@
             this.comboVehiculo.Name = "comboVehiculo";
             this.comboVehiculo.Size = new System.Drawing.Size(203, 21);
             this.comboVehiculo.TabIndex = 46;
+            this.comboVehiculo.SelectedIndexChanged += new System.EventHandler(this.comboVehiculo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -207,6 +217,15 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.LbVehiculoPrecio);
+            this.bunifuCards1.Controls.Add(this.LbVehiculoTransmision);
+            this.bunifuCards1.Controls.Add(this.LbVehiculoColor);
+            this.bunifuCards1.Controls.Add(this.LbVehiculoAnio);
+            this.bunifuCards1.Controls.Add(this.LbVehiculoCombustible);
+            this.bunifuCards1.Controls.Add(this.label11);
+            this.bunifuCards1.Controls.Add(this.label10);
+            this.bunifuCards1.Controls.Add(this.label9);
+            this.bunifuCards1.Controls.Add(this.label8);
             this.bunifuCards1.Controls.Add(this.label6);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(398, 76);
@@ -215,6 +234,16 @@
             this.bunifuCards1.ShadowDepth = 20;
             this.bunifuCards1.Size = new System.Drawing.Size(362, 269);
             this.bunifuCards1.TabIndex = 55;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 19);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Color:";
             // 
             // label4
             // 
@@ -226,15 +255,90 @@
             this.label4.TabIndex = 56;
             this.label4.Text = "Datos del vehiculo";
             // 
-            // label6
+            // label8
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 19);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "label6";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 77);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 19);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Año:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(20, 124);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 19);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Tipo de Combustile:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 171);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 19);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Transmision:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(20, 218);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 19);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Precio:";
+            // 
+            // LbVehiculoCombustible
+            // 
+            this.LbVehiculoCombustible.AutoSize = true;
+            this.LbVehiculoCombustible.Location = new System.Drawing.Point(177, 129);
+            this.LbVehiculoCombustible.Name = "LbVehiculoCombustible";
+            this.LbVehiculoCombustible.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoCombustible.TabIndex = 6;
+            this.LbVehiculoCombustible.Text = "------";
+            // 
+            // LbVehiculoAnio
+            // 
+            this.LbVehiculoAnio.AutoSize = true;
+            this.LbVehiculoAnio.Location = new System.Drawing.Point(177, 84);
+            this.LbVehiculoAnio.Name = "LbVehiculoAnio";
+            this.LbVehiculoAnio.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoAnio.TabIndex = 7;
+            this.LbVehiculoAnio.Text = "------";
+            // 
+            // LbVehiculoColor
+            // 
+            this.LbVehiculoColor.AutoSize = true;
+            this.LbVehiculoColor.Location = new System.Drawing.Point(177, 40);
+            this.LbVehiculoColor.Name = "LbVehiculoColor";
+            this.LbVehiculoColor.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoColor.TabIndex = 8;
+            this.LbVehiculoColor.Text = "------";
+            // 
+            // LbVehiculoTransmision
+            // 
+            this.LbVehiculoTransmision.AutoSize = true;
+            this.LbVehiculoTransmision.Location = new System.Drawing.Point(177, 177);
+            this.LbVehiculoTransmision.Name = "LbVehiculoTransmision";
+            this.LbVehiculoTransmision.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoTransmision.TabIndex = 9;
+            this.LbVehiculoTransmision.Text = "------";
+            // 
+            // LbVehiculoPrecio
+            // 
+            this.LbVehiculoPrecio.AutoSize = true;
+            this.LbVehiculoPrecio.Location = new System.Drawing.Point(177, 223);
+            this.LbVehiculoPrecio.Name = "LbVehiculoPrecio";
+            this.LbVehiculoPrecio.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoPrecio.TabIndex = 10;
+            this.LbVehiculoPrecio.Text = "------";
             // 
             // AdmVentas
             // 
@@ -256,7 +360,7 @@
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.LbTituloVenta);
             this.Controls.Add(this.label5);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdmVentas";
             this.Text = "AdmVentas";
             this.Load += new System.EventHandler(this.AdmVentas_Load_1);
@@ -285,5 +389,14 @@
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LbVehiculoPrecio;
+        private System.Windows.Forms.Label LbVehiculoTransmision;
+        private System.Windows.Forms.Label LbVehiculoColor;
+        private System.Windows.Forms.Label LbVehiculoAnio;
+        private System.Windows.Forms.Label LbVehiculoCombustible;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

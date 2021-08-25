@@ -35,6 +35,11 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             LbTituloVenta.Text = "Modificar Venta";
             this.venta = _venta;
             txtPrecio.Text = _venta.Precio.ToString();
+            LbVehiculoColor.Text = _venta.Vehiculo.Color;
+            LbVehiculoAnio.Text = _venta.Vehiculo.Anio;
+            LbVehiculoCombustible.Text = _venta.Vehiculo.TipoCombustible.NombreCombustible;
+            LbVehiculoTransmision.Text = _venta.Vehiculo.TipoTransmision.NombreTransmision;
+            LbVehiculoPrecio.Text = _venta.Vehiculo.Precio.ToString();
             if (_venta.Estatus == "AC")
             {
                 comboEstado.SelectedItem = "Activo";
@@ -67,6 +72,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 {
                     ventaRepositorio.Modificar(venta);
                     MessageBox.Show("Datos actualizados correctamente", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Close();
                 }
                 else
                 {
@@ -75,6 +82,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                     if (feedback.Success)
                     {
                         MessageBox.Show(feedback.Message, "Datos Guardados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Close();
                     }
                     else
                     {
@@ -150,9 +159,9 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             comboClientes.DataSource = clienteRepositorio.GetAll();
 
             VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
-            comboVehiculo.DisplayMember = "NombreModelo";
+            comboVehiculo.DisplayMember = "Placa";
             comboVehiculo.ValueMember = "Id";
-            comboVehiculo.DataSource = vehiculoRepositorio.GetAll().Select(x => new {x.Id, x.Modelo.NombreModelo }).ToList();
+            comboVehiculo.DataSource = vehiculoRepositorio.GetAll();
 
             if (this.esModificacion)
             {
@@ -161,6 +170,18 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
                 comboVehiculo.SelectedValue = venta.VehiculoId;
                 comboMetodoPago.SelectedItem = venta.MetodoPago;
             }
+        }
+
+        private void comboVehiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VehiculoRepositorio vehiculoRepositorio = new VehiculoRepositorio();
+            Vehiculo vehiculo = vehiculoRepositorio.FIndById(int.Parse(comboVehiculo.SelectedValue.ToString()));
+
+            LbVehiculoColor.Text = vehiculo.Color;
+            LbVehiculoAnio.Text = vehiculo.Anio;
+            LbVehiculoCombustible.Text = vehiculo.TipoCombustible.NombreCombustible;
+            LbVehiculoTransmision.Text = vehiculo.TipoTransmision.NombreTransmision;
+            LbVehiculoPrecio.Text = vehiculo.Precio.ToString();
         }
     }
 }

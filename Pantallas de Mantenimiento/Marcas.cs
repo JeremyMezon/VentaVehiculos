@@ -21,8 +21,17 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
 
         void actualizarTabla()
         {
-            MarcaRepositorio marcaRepositorio = new MarcaRepositorio();
-            dataMarca.DataSource = marcaRepositorio.GetAll();
+            try
+            {
+                MarcaRepositorio marcaRepositorio = new MarcaRepositorio();
+                dataMarca.DataSource = marcaRepositorio.GetAll().Select(x => new { 
+                    x.Id,x.Nombre,x.FechaRegistro,x.FechaActualizacion
+                }).ToList();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("No hay datos que mostrar en la tabla");
+            }
 
         }
 
