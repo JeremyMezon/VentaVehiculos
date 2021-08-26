@@ -64,5 +64,10 @@ namespace VentaVehiculos
             Ventas ventas = new Ventas();
             ventas.ShowDialog();
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

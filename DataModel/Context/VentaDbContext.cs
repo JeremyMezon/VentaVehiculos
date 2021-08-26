@@ -134,26 +134,6 @@ namespace VentaVehiculos.DataModel.Context
 
             #endregion
 
-            //#region VentaVehiculo
-
-            //modelBuilder.Entity<Venta>()
-            //    .ToTable("VentaVehiculo")
-            //    .HasKey(k => k.Id);
-
-            //modelBuilder.Entity<Venta>()
-            //    .Property(p => p.Id)
-            //    .HasColumnName("VentaVehiculoID");
-
-            //modelBuilder.Entity<Venta>()
-            //    .Property(p => p.Precio)
-            //    .HasColumnType("int");
-
-            //modelBuilder.Entity<Venta>()
-            //    .HasRequired(p => p.Vehiculo)
-            //    .WithMany()
-            //    .WillCascadeOnDelete(false);
-
-            //#endregion
 
             #region TipoCombustible
 

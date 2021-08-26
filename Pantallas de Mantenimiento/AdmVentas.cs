@@ -40,6 +40,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             LbVehiculoCombustible.Text = _venta.Vehiculo.TipoCombustible.NombreCombustible;
             LbVehiculoTransmision.Text = _venta.Vehiculo.TipoTransmision.NombreTransmision;
             LbVehiculoPrecio.Text = _venta.Vehiculo.Precio.ToString();
+            LbVehiculoMarca.Text = _venta.Vehiculo.Modelo.Marca.Nombre;
+            LbVehiculoModelo.Text = _venta.Vehiculo.Modelo.NombreModelo;
             if (_venta.Estatus == "AC")
             {
                 comboEstado.SelectedItem = "Activo";
@@ -182,6 +184,8 @@ namespace VentaVehiculos.Pantallas_de_Mantenimiento
             LbVehiculoCombustible.Text = vehiculo.TipoCombustible.NombreCombustible;
             LbVehiculoTransmision.Text = vehiculo.TipoTransmision.NombreTransmision;
             LbVehiculoPrecio.Text = vehiculo.Precio.ToString();
+            LbVehiculoMarca.Text = vehiculo.Modelo.Marca.Nombre;
+            LbVehiculoModelo.Text = vehiculo.Modelo.NombreModelo;
         }
     }
 }

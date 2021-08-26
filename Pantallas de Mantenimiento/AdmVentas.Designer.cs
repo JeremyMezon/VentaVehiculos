@@ -53,6 +53,10 @@
             this.LbVehiculoColor = new System.Windows.Forms.Label();
             this.LbVehiculoTransmision = new System.Windows.Forms.Label();
             this.LbVehiculoPrecio = new System.Windows.Forms.Label();
+            this.LbVehiculoModelo = new System.Windows.Forms.Label();
+            this.LbVehiculoMarca = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -217,11 +221,15 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Tomato;
+            this.bunifuCards1.Controls.Add(this.LbVehiculoModelo);
             this.bunifuCards1.Controls.Add(this.LbVehiculoPrecio);
             this.bunifuCards1.Controls.Add(this.LbVehiculoTransmision);
+            this.bunifuCards1.Controls.Add(this.LbVehiculoMarca);
             this.bunifuCards1.Controls.Add(this.LbVehiculoColor);
             this.bunifuCards1.Controls.Add(this.LbVehiculoAnio);
+            this.bunifuCards1.Controls.Add(this.label14);
             this.bunifuCards1.Controls.Add(this.LbVehiculoCombustible);
+            this.bunifuCards1.Controls.Add(this.label15);
             this.bunifuCards1.Controls.Add(this.label11);
             this.bunifuCards1.Controls.Add(this.label10);
             this.bunifuCards1.Controls.Add(this.label9);
@@ -259,7 +267,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 77);
+            this.label8.Location = new System.Drawing.Point(20, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 19);
             this.label8.TabIndex = 2;
@@ -269,7 +277,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 124);
+            this.label9.Location = new System.Drawing.Point(20, 92);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(150, 19);
             this.label9.TabIndex = 3;
@@ -279,7 +287,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 171);
+            this.label10.Location = new System.Drawing.Point(20, 123);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 19);
             this.label10.TabIndex = 4;
@@ -289,7 +297,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 218);
+            this.label11.Location = new System.Drawing.Point(20, 154);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 19);
             this.label11.TabIndex = 5;
@@ -298,7 +306,7 @@
             // LbVehiculoCombustible
             // 
             this.LbVehiculoCombustible.AutoSize = true;
-            this.LbVehiculoCombustible.Location = new System.Drawing.Point(177, 129);
+            this.LbVehiculoCombustible.Location = new System.Drawing.Point(177, 100);
             this.LbVehiculoCombustible.Name = "LbVehiculoCombustible";
             this.LbVehiculoCombustible.Size = new System.Drawing.Size(25, 13);
             this.LbVehiculoCombustible.TabIndex = 6;
@@ -307,7 +315,7 @@
             // LbVehiculoAnio
             // 
             this.LbVehiculoAnio.AutoSize = true;
-            this.LbVehiculoAnio.Location = new System.Drawing.Point(177, 84);
+            this.LbVehiculoAnio.Location = new System.Drawing.Point(177, 70);
             this.LbVehiculoAnio.Name = "LbVehiculoAnio";
             this.LbVehiculoAnio.Size = new System.Drawing.Size(25, 13);
             this.LbVehiculoAnio.TabIndex = 7;
@@ -325,7 +333,7 @@
             // LbVehiculoTransmision
             // 
             this.LbVehiculoTransmision.AutoSize = true;
-            this.LbVehiculoTransmision.Location = new System.Drawing.Point(177, 177);
+            this.LbVehiculoTransmision.Location = new System.Drawing.Point(177, 130);
             this.LbVehiculoTransmision.Name = "LbVehiculoTransmision";
             this.LbVehiculoTransmision.Size = new System.Drawing.Size(25, 13);
             this.LbVehiculoTransmision.TabIndex = 9;
@@ -334,11 +342,49 @@
             // LbVehiculoPrecio
             // 
             this.LbVehiculoPrecio.AutoSize = true;
-            this.LbVehiculoPrecio.Location = new System.Drawing.Point(177, 223);
+            this.LbVehiculoPrecio.Location = new System.Drawing.Point(177, 160);
             this.LbVehiculoPrecio.Name = "LbVehiculoPrecio";
             this.LbVehiculoPrecio.Size = new System.Drawing.Size(25, 13);
             this.LbVehiculoPrecio.TabIndex = 10;
             this.LbVehiculoPrecio.Text = "------";
+            // 
+            // LbVehiculoModelo
+            // 
+            this.LbVehiculoModelo.AutoSize = true;
+            this.LbVehiculoModelo.Location = new System.Drawing.Point(177, 220);
+            this.LbVehiculoModelo.Name = "LbVehiculoModelo";
+            this.LbVehiculoModelo.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoModelo.TabIndex = 14;
+            this.LbVehiculoModelo.Text = "------";
+            // 
+            // LbVehiculoMarca
+            // 
+            this.LbVehiculoMarca.AutoSize = true;
+            this.LbVehiculoMarca.Location = new System.Drawing.Point(177, 190);
+            this.LbVehiculoMarca.Name = "LbVehiculoMarca";
+            this.LbVehiculoMarca.Size = new System.Drawing.Size(25, 13);
+            this.LbVehiculoMarca.TabIndex = 13;
+            this.LbVehiculoMarca.Text = "------";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(20, 216);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 19);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Modelo:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(20, 185);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(59, 19);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Marca:";
             // 
             // AdmVentas
             // 
@@ -398,5 +444,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LbVehiculoModelo;
+        private System.Windows.Forms.Label LbVehiculoMarca;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }
